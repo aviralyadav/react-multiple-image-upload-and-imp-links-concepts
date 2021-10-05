@@ -1,0 +1,12 @@
+<OutlinedInput
+              onInput={(e) => {
+                e.target.value = e.target.value.replace(/[^a-zA-Z0-9_/&-,.]/g,''); // restrict special character other than _/&-,. and alphanumerics
+              }}
+                onChange={(e) => handleChangeSearch(e.target.value, "client")}
+                placeholder="Client Name"                
+                inputProps={{
+                  "aria-label": "client",
+                  maxLength: 50
+                }}
+                classes={{ input: classes.inpClas, root: classes.outRoot }}
+              />
